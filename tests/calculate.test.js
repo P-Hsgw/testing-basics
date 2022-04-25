@@ -15,3 +15,7 @@ test("10/10 should become 1", () => {
 test("10*10 should become 100", () => {
     expect(multiply(10, 10)).toBe(100)
 })
+
+test("String should become NaN", () => {
+    expect(multiply("hello")).toBe(NaN)
+})
