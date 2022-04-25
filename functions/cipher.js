@@ -2,6 +2,7 @@
 
 const cipher = (message, nParam) => {
     const alphabet = "abcdefghijklmnopqrstuvwxyz";
+    const numbers = "1234567890"
     let shiftedAlphabet = ""
     let result = "";
     message = message.toLowerCase();
@@ -12,9 +13,12 @@ const cipher = (message, nParam) => {
         }
 
         for (let i = 0; i < message.length; i++){
+            let index = numbers.indexOf(message[i])
             if (message[i] == " ") {
                 result += " "
-            } else {
+            } else if (message[i] == numbers[index]) {
+                result += message[i]
+            }else {
                 let index = alphabet.indexOf(message[i]);
                 result += shiftedAlphabet[index];
             }
