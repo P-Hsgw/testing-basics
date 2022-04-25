@@ -1,7 +1,7 @@
 import capitalize from "../functions/capitalize"
 
 test(`"test" should become "Test"`, () => {
-  expect(capitalize('test')).toBe('Test');
+  expect(capitalize('test')).toBe('Test')
 });
 
 test(`"0123234dsad2312" should become "0123234dsad2312"`, () => {
